@@ -6,17 +6,17 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Nueva carpeta varios/respaldo compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-annotations-2.13.0.jar">
+	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Carpeta_varios/respaldo_compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-annotations-2.13.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Nueva carpeta varios/respaldo compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-core-2.13.4.jar">
+	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Carpeta_varios/respaldo_compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-core-2.13.4.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Nueva carpeta varios/respaldo compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-databind-2.13.4.jar">
+	<classpathentry kind="lib" path="C:/Users/Sergio/Desktop/Carpeta_varios/respaldo_compaq/ONE/Formación Java Orientado a Objetos/Librerias Jackson/jackson-databind-2.13.4.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

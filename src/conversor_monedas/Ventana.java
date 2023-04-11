@@ -74,6 +74,9 @@ public class Ventana {
 			this.centrarDivisor(e);
 		}
 	};
+	
+	private Color color_primario = new Color(51, 204, 153);
+	private Color color_secundario = new Color (153, 255, 204);
 
 	private JFrame frame = new JFrame();
 	private JPanel contenedorPrincipal = new JPanel();
@@ -88,6 +91,7 @@ public class Ventana {
 	
 	public Ventana() {
 		initialize();
+		colorearInterfaz();
 	}
 	
 
@@ -123,6 +127,11 @@ public class Ventana {
 		JButton boton = new JButton ("Convertir");
 		boton.addActionListener(this::convertir); //Añadir acción al botón con escuchador
 		contenedorPrincipal.add(boton);
+		boton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+		
+		
+		salida.setHorizontalAlignment(JLabel.CENTER);
+		entrada.setHorizontalAlignment(JLabel.CENTER);
 
 		}
 	private void inicializarContenedorPrincipal() {
@@ -144,7 +153,7 @@ public class Ventana {
 	
 	private void inicializarSelectorConversor() {
 		selectorConversor.addItem("Conversor de Monedas");
-		selectorConversor.addItem("Conversor de Temperatura");
+		// selectorConversor.addItem("Conversor de Temperatura");
 		contenedorPrincipal.add(selectorConversor);
 	}
 	
@@ -201,12 +210,20 @@ public class Ventana {
 		String moneda1 = recuperarNombreDeMoneda(listaIzquierda);
 		String moneda2 = recuperarNombreDeMoneda(listaDerecha);
 		Double tasaDeCambio = Backend.recuperarTasaDeCambio(moneda1, moneda2);
-		Double cantidad = Double.parseDouble(entrada.getText()); //Convertir de string a double
+		Double cantidad = entrada.obtenerValor(); //Me muestra el valor en la ventana
 		Double conversion = cantidad * tasaDeCambio;
 		salida.setText(conversion.toString());//De double a String
 		//String.format("%2f", conversion) -> hace la funcion toString pero convierte el numero a 2 decimales
 		
+		//Eliminar las ",", porque dan NumberFormatException;
 		
+	}
+	
+	private void colorearInterfaz() {   //Crear metodo para modificar color de la interfaz
+		frame.getContentPane().setBackground(color_primario); //Recuperar el contenedor principal
+		contenedorPrincipal.setBackground(color_primario);
+		panelIzquierdo.setBackground(color_secundario);
+		panelDerecho.setBackground(color_secundario);
 	}
 	
 }

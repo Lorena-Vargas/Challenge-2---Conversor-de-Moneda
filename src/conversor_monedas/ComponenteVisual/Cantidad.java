@@ -48,5 +48,11 @@ public class Cantidad extends JFormattedTextField { //Validación de texto, solo
 			   }
 		};
 	}
+	
+	public double obtenerValor() {     //Tomar lo introducido al campo de texto para quitar las comas
+		String entrada = this.getText().replace(",", "");       //Entrar al campo de texto en variable lo guardamos para poderlo obtener  
+		// entrada = entrada.replace(",", "");                  Lo mismo de arriba, paso a paso
+		return Double.parseDouble(entrada);     //Ya quitamos las comas, queremos que nos devuelva la cantidad 
+	}
 
 }
